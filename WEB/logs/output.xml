@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211022 21:28:39.056" rpa="false" schemaversion="2">
+<suite id="s1" name="Webautomation" source="C:\Users\xcorv\OneDrive\Área de Trabalho\primeAnderson\WEB\webautomation.robot">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente​">
+<kw name="Abrir navegador" type="SETUP">
+<msg timestamp="20211022 21:28:39.091" level="FAIL">No keyword with name 'Abrir navegador' found.</msg>
+<status status="FAIL" starttime="20211022 21:28:39.091" endtime="20211022 21:28:39.091"/>
+</kw>
+<kw name="Fechar navegador" type="TEARDOWN">
+<msg timestamp="20211022 21:28:39.093" level="FAIL">No keyword with name 'Fechar navegador' found.</msg>
+<status status="FAIL" starttime="20211022 21:28:39.093" endtime="20211022 21:28:39.093">No keyword with name 'Fechar navegador' found.</status>
+</kw>
+<tag>PESQUISAR</tag>
+<status status="FAIL" starttime="20211022 21:28:39.088" endtime="20211022 21:28:39.094">Setup failed:
+No keyword with name 'Abrir navegador' found.
+
+Also teardown failed:
+No keyword with name 'Fechar navegador' found.</status>
+</test>
+<doc>Aqui estarão presentes os primeiros testes automatizados Web.</doc>
+<status status="FAIL" starttime="20211022 21:28:39.059" endtime="20211022 21:28:39.095"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">PESQUISAR</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Webautomation">Webautomation</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211022 21:28:39.086" level="ERROR">Error in file 'C:\Users\xcorv\OneDrive\Área de Trabalho\primeAnderson\WEB\webautomation.robot' on line 3: Resource file '..\resources\package.robot' does not exist.</msg>
+</errors>
+</robot>
