@@ -13,8 +13,18 @@ E pesquise um vídeo sobre "${PESQUISA}"​
     Press Keycode                        66
 
 E acessar o canal da Prime​
-    Wait Until Element Is Visible        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 58 visualizações - há 1 ano - assistir o vídeo
-    Click Element                        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 58 visualizações - há 1 ano - assistir o vídeo
+    Wait Until Element Is Visible        xpath=//android.view.ViewGroup[contains(@content-desc,"Prime Experts - Parceria entre Prime Control e UniBrasil ")]
+    Click Element                        xpath=//android.view.ViewGroup[contains(@content-desc,"Prime Experts - Parceria entre Prime Control e UniBrasil ")]
+
+    FOR    ${counter}    IN RANGE    0    2
+        ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    accessibility_id=Fechar    5
+        IF    ${status}
+              Click Element    accessibility_id=Fechar
+              sleep  2
+        END 
+        
+    END
+    
 
 Quando clicar em Inscrever-se​
     Click Element                        accessibility_id=Inscreva-se em Prime Control.
