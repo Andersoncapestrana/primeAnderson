@@ -1,33 +1,24 @@
+*** Settings ***
+Documentation        Aqui estarão presentes todas as keywords dos testes Mobile.
+Resource             ../../package_mobile.robot
+
 *** Keywords ***
-Abrir aplicativo
-    Set Appium Timeout    20
-    Open Application    http://localhost:4723/wd/hub
-    ...    platformName=Android
-    ...    deviceName=emulator-5554
-    ...    appPackage=com.google.android.youtube
-    ...    appActivity=com.google.android.youtube.HomeActivity
-    ...    autoGrantPermissions=true
+Dado que o cliente esteja na tela de Home​
+    Wait Until Element Is Visible        xpath=//*[contains(@text, 'Início')]
+    Wait Until Element Is Visible        accessibility_id=YouTube
 
-Fechar aplicativo
-    Capture Page Screenshot
-    Close Application
+E pesquise um vídeo sobre "${PESQUISA}"​
+    Click Element                        accessibility_id=Pesquisar
+    Input Text                           id=search_edit_text            ${PESQUISA}
+    Press Keycode                        66
 
-Dado que o cliente esteja na tela de Home
-    Wait Until Element Is Visible    xpath=//*[contains(@text, 'Início')]
-    Wait Until Element Is Visible    accessibility_id=YouTube
+E acessar o canal da Prime​
+    Wait Until Element Is Visible        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 58 visualizações - há 1 ano - assistir o vídeo
+    Click Element                        accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 58 visualizações - há 1 ano - assistir o vídeo
 
-E pesquise um vídeo sobre "${PESQUISA}"
-    Click Element                    accessibility_id=Pesquisar
-    Input Text                       id=search_edit_text    ${PESQUISA}
-    Press Keycode                    66
+Quando clicar em Inscrever-se​
+    Click Element                        accessibility_id=Inscreva-se em Prime Control.
+    Click Element                        accessibility_id=Inscreva-se em Prime Control.
 
-E acessar o canal da Prime
-    Wait Until Element Is Visible    accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 58 visualizações - há 1 ano - assistir o vídeo
-    Click Element                    accessibility_id=Prime Experts - Parceria entre Prime Control e UniBrasil - 3 minutos e 38 segundos - Ir ao canal - Prime Control - 58 visualizações - há 1 ano - assistir o vídeo
-
-Quando clicar em Inscrever-se
-    Click Element                    accessibility_id=Inscreva-se em Prime Control.
-    Click Element                    accessibility_id=Inscreva-se em Prime Control.
-
-Então será apresentado como Inscrito
-    Wait Until Element Is Visible    accessibility_id=Cancelar inscrição de Prime Control.
+Então será apresentado como Inscrito​
+    Wait Until Element Is Visible        accessibility_id=Cancelar inscrição de Prime Control.
