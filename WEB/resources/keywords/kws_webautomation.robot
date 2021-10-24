@@ -2,7 +2,7 @@
 *** Settings ***
 Documentation        Aqui estarão presentes todas as keywords dos testes Web.
 
-Resource             ../package.robot
+Resource             ../../package_web.robot
 
 *** Keywords ***
 Acessar a página home do site Automation Practice​

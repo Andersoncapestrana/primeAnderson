@@ -9,12 +9,12 @@ Library        SeleniumLibrary
 ##############################################
 #                 Keywords                   #
 ##############################################
-Resource       keywords/kws_webautomation.robot
+Resource       resources/keywords/kws_webautomation.robot
 
 ##############################################
 #                 Pages                      #
 ##############################################
-Resource       pages/pages_home.robot
+Resource       resources/page/pages_home.robot
 
 ##############################################
 #                 Hooks                      #

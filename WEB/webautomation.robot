@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Aqui estarão presentes os primeiros testes automatizados Web.
 
-Resource             ../resources/package.robot
+Resource             ./package_web.robot
 
 Test Setup           Abrir navegador
 Test Teardown        Fechar navegador
